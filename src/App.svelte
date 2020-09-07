@@ -9,5 +9,5 @@
 <Navbar />
 
 {#each fruits as item}
-  <h1>Default title</h1>
+  <h1>fruit: {item}</h1>
 {/each}
