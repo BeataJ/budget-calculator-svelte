@@ -9,3 +9,4 @@
 </script>
 
 <Navbar />
+<ExpenseList />
