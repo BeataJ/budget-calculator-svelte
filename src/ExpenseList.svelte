@@ -7,6 +7,8 @@
 <section>
   <SectionTitle title="expense list" />
   <ul>
-    {#each expenses as expense}{/each}
+    {#each expenses as expense}
+      <SingleExpense />
+    {/each}
   </ul>
 </section>
