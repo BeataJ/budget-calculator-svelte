@@ -4,6 +4,12 @@
   export let expenses = [];
 </script>
 
+<style>
+  h2 {
+    text-transform: capitalize;
+  }
+</style>
+
 <section>
   <SectionTitle title="expense list" />
   <ul>
