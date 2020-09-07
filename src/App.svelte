@@ -9,4 +9,6 @@
 </script>
 
 <Navbar />
-<ExpenseList />
+<main class="content">
+  <ExpenseList />
+</main>
