@@ -7,3 +7,7 @@
 </style>
 
 <Navbar />
+
+{#each fruits as item}
+  <h1>Default title</h1>
+{/each}
