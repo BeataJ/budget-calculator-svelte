@@ -9,6 +9,8 @@
   <ul>
     {#each expenses as expense}
       <SingleExpense />
+    {:else}
+      <h2>currently you have no expenses</h2>
     {/each}
   </ul>
 </section>
