@@ -7,5 +7,5 @@
 </style>
 
 <Navbar />
-<Title />
-<Title />
+<Title title="add expense" />
+<Title title="expense list" />
