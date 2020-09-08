@@ -1,4 +1,5 @@
 <script>
+  import { setContext } from 'svelte';
   // Components
   import Navbar from './Navbar.svelte';
   import ExpenseList from './ExpenseList.svelte';
@@ -7,6 +8,9 @@
   // Veriables
   let expenses = [...expensesData];
   // functions
+  const removeExpense = (id) => {
+    expenses = expenses.filter((item) => item.id !== id);
+  };
 </script>
 
 <Navbar />
