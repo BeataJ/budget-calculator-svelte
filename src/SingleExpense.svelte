@@ -13,6 +13,6 @@
     <h4>amount: ${amount}</h4>
   </div>
   <div class="expense-buttons">
-    <article />
+    <button class="expense-btn edit-btn"><i class="fas fa-pen" /></button>
   </div>
 </article>
