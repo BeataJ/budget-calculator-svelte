@@ -11,6 +11,8 @@
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
   };
+  // context
+  setContext('remove', removeExpense);
 </script>
 
 <Navbar />
