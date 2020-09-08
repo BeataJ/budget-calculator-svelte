@@ -1,7 +1,6 @@
 <script>
   export let name = '';
   export let amount = 0;
-  export let id;
 </script>
 
 <article class="single-expense">
