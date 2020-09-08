@@ -1,9 +1,6 @@
 <script>
   import { setContext } from 'svelte';
-  const state = {
-    name: 'simple name',
-    remove: removeExpense,
-  };
+
   // Components
   import Navbar from './Navbar.svelte';
   import ExpenseList from './ExpenseList.svelte';
@@ -14,6 +11,10 @@
   // functions
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
+  };
+  const state = {
+    name: 'simple name',
+    removeExpense: removeExpense,
   };
   // context
   setContext('state', state);

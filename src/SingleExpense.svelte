@@ -7,7 +7,7 @@
   const toggleAmount = () => {
     displayAmount = !displayAmount;
   };
-  const removeExpense = getContext('remove');
+  const { removeExpense } = getContext('state');
 </script>
 
 <article class="single-expense">
