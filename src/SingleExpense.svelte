@@ -2,6 +2,7 @@
   export let id;
   export let name = '';
   export let amount = 0;
+  export let removeExpense;
   let displayAmount = false;
   const toggleAmount = () => {
     displayAmount = !displayAmount;
