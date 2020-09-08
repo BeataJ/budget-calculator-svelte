@@ -11,7 +11,9 @@
       {name}
       <button class="amount-btn"> <i class="fas fa-caret-down" /> </button>
     </h2>
-    <h4>amount: ${amount}</h4>
+    {#if displayAmount}
+      <h4>amount: ${amount}</h4>
+    {/if}
   </div>
   <div class="expense-buttons">
     <button class="expense-btn edit-btn"><i class="fas fa-pen" /></button>
