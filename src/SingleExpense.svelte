@@ -1,6 +1,7 @@
 <script>
-  export let expense;
-  let { name, amount } = expense;
+  export let name;
+  export let amount;
+  export let id;
 </script>
 
 <div>
