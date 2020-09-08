@@ -7,12 +7,9 @@
   // Veriables
   let expenses = [...expensesData];
   // functions
-  const removeExpense = (id) => {
-    expenses = expenses.filter((item) => item.id !== id);
-  };
 </script>
 
 <Navbar />
 <main class="content">
-  <ExpenseList {expenses} {removeExpense} />
+  <ExpenseList {expenses} />
 </main>
