@@ -1,8 +1,8 @@
 <script>
-  export let index;
+  export let expense;
 </script>
 
 <div>
-  <p>{index}</p>
-  <h1>this is a single expense</h1>
+  <h2>name: {expense.name}</h2>
+  <h2>amount: {expense.amount}</h2>
 </div>
