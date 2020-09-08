@@ -10,5 +10,5 @@
 
 <Navbar />
 <main class="content">
-  <ExpenseList />
+  <ExpenseList {expenses} />
 </main>
