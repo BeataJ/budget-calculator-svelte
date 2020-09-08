@@ -9,7 +9,11 @@
   <div class="expense-info">
     <h2>
       {name}
-      <button class="amount-btn"> <i class="fas fa-caret-down" /> </button>
+      <button
+        class="amount-btn"
+        on:click={}>
+        <i class="fas fa-caret-down" />
+      </button>
     </h2>
     {#if displayAmount}
       <h4>amount: ${amount}</h4>
