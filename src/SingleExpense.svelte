@@ -1,10 +1,18 @@
 <script>
-  export let name;
-  export let amount;
+  export let name = '';
+  export let amount = 0;
   export let id;
 </script>
 
-<div>
-  <h2>name: {name}</h2>
-  <h2>amount: {amount}</h2>
-</div>
+<article class="single-expense">
+  <div class="expense-info">
+    <h2>
+      {name}
+      <button class="amount-btn"> <i class="fas fa-caret-down" /> </button>
+    </h2>
+    <h4>amount: ${amount}</h4>
+  </div>
+  <div class="expense-buttons">
+    <article />
+  </div>
+</article>
