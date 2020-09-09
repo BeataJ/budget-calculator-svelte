@@ -17,7 +17,9 @@
       <label for="amount">amount</label>
       <input type="number" id="amount" bind:value={amount} />
     </div>
-    <p class="form-empty">please fill out all form fields</p>
+    {#if isEmpty}
+      <p class="form-empty">please fill out all form fields</p>
+    {/if}
     <button type="submit" class="btn btn-block"> add expense </button>
     <button type="button" class="close-btn">
       <i class="fas fa-times" /> close
