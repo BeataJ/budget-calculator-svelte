@@ -4,6 +4,10 @@
   let amount = null;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('form submited');
+  };
 </script>
 
 <section class="form">
