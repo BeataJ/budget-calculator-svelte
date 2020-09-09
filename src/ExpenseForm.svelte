@@ -14,5 +14,6 @@
       <label for="amount">amount</label>
       <input type="number" id="amount" />
     </div>
+    <p class="form-empty">please fill out all form fields</p>
   </form>
 </section>
