@@ -28,4 +28,5 @@
 <Navbar />
 <main class="content">
   <ExpenseList {expenses} />
+  <button type="button" class="btn btn-primary btn-block">clear expenses</button>
 </main>
