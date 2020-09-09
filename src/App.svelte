@@ -12,12 +12,12 @@
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
   };
-  const state = {
-    name: 'simple name',
-    removeExpense: removeExpense,
-  };
+  // const state = {
+  //   name: 'simple name',
+  //   removeExpense: removeExpense,
+  // };
   // context
-  setContext('state', state);
+  setContext('remove', removeExpense);
 </script>
 
 <Navbar />
