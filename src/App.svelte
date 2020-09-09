@@ -38,6 +38,7 @@
 
 <Navbar />
 <main class="content">
+  <ExpenseForm />
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
   <button
