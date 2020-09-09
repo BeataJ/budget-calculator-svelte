@@ -3,6 +3,7 @@
   let name = '';
   let amount = null;
   // $: console.log({ name, amount });
+  $: isEmpty = !name || !amount;
 </script>
 
 <section class="form">
