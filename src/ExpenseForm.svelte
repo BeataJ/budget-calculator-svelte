@@ -2,6 +2,7 @@
   import Title from './Title.svelte';
   let name = '';
   let amount = null;
+  // $: console.log({ name, amount });
 </script>
 
 <section class="form">
