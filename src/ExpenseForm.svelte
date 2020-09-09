@@ -10,5 +10,9 @@
       <label for="name">name</label>
       <input type="text" id="name" />
     </div>
+    <div class="form-control">
+      <label for="amount">amount</label>
+      <input type="number" id="amount" />
+    </div>
   </form>
 </section>
