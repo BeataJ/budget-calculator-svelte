@@ -18,9 +18,12 @@
   // };
   // context
   setContext('remove', removeExpense);
+  const deleteExpense = (e) => {
+    console.log(e);
+  };
 </script>
 
 <Navbar />
 <main class="content">
-  <ExpenseList {expenses} />
+  <ExpenseList {expenses} on:delete={deleteExpense} />
 </main>
