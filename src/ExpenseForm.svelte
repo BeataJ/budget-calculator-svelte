@@ -5,7 +5,9 @@
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
   const handleSubmit = () => {
-    console.log('form submited');
+    console.log({ name, amount });
+    name = '';
+    amount = null;
   };
 </script>
 
