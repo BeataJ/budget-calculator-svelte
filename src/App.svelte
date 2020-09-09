@@ -6,6 +6,7 @@
   import ExpenseList from './ExpenseList.svelte';
   // data
   import expensesData from './expenses';
+  import Totals from './Totals.svelte';
   // Veriables
   let expenses = [...expensesData];
   // functions
