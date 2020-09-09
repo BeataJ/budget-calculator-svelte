@@ -9,6 +9,11 @@
   import Totals from './Totals.svelte';
   // Veriables
   let expenses = [...expensesData];
+  // reactive
+  $: total = expenses.reduce((acc, curr) => {
+    console.log({ acc, amount: curr.amount });
+    return (acc += curr.amount);
+  }, 0);
   // functions
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
@@ -33,6 +38,7 @@
 
 <Navbar />
 <main class="content">
+  <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
 
   <button
