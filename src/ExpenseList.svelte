@@ -15,7 +15,7 @@
   <SectionTitle title="expense list" />
   <ul>
     {#each expenses as expense}
-      <SingleExpense {...expense} />
+      <SingleExpense {...expense} on:delete />
     {:else}
       <h2>currently you have no expenses</h2>
     {/each}
