@@ -12,6 +12,11 @@
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
   };
+
+  const clearExpenses = () => {
+    expenses = [];
+  };
+
   // const state = {
   //   name: 'simple name',
   //   removeExpense: removeExpense,
@@ -28,5 +33,8 @@
 <Navbar />
 <main class="content">
   <ExpenseList {expenses} />
-  <button type="button" class="btn btn-primary btn-block">clear expenses</button>
+  <button
+    type="button"
+    class="btn btn-primary btn-block"
+    on:click={clearExpenses}>clear expenses</button>
 </main>
