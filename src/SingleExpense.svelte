@@ -1,5 +1,5 @@
 <script>
-  import { getContext } from 'svelte';
+  import { getContext, createEventDispatcher } from 'svelte';
   export let id;
   export let name = '';
   export let amount = 0;
@@ -8,6 +8,7 @@
     displayAmount = !displayAmount;
   };
   const removeExpense = getContext('remove');
+  const dispatch = createEventDispatcher();
 </script>
 
 <article class="single-expense">
