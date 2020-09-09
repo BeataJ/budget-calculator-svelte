@@ -11,7 +11,6 @@
   let expenses = [...expensesData];
   // reactive
   $: total = expenses.reduce((acc, curr) => {
-    console.log({ acc, amount: curr.amount });
     return (acc += curr.amount);
   }, 0);
   // functions
