@@ -8,7 +8,7 @@
     displayAmount = !displayAmount;
   };
   const removeExpense = getContext('remove');
-  const dispatch = createEventDispatcher();
+  // const dispatch = createEventDispatcher();
 </script>
 
 <article class="single-expense">
@@ -25,14 +25,14 @@
   </div>
   <div class="expense-buttons">
     <button class="expense-btn edit-btn"><i class="fas fa-pen" /></button>
-    <!-- <button class="expense-btn delete-btn" on:click={() => removeExpense(id)}><i
-        class="fas fa-trash" /></button> -->
-    <button
+    <button class="expense-btn delete-btn" on:click={() => removeExpense(id)}><i
+        class="fas fa-trash" /></button>
+    <!-- <button
       class="expense-btn delete-btn"
       on:click={() => dispatch('delete', {
           id,
           name: 'hi from SingleExpense',
         })}><i class="fas fa-trash" />
-    </button>
+    </button> -->
   </div>
 </article>
