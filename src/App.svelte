@@ -7,6 +7,7 @@
   // data
   import expensesData from './expenses';
   import Totals from './Totals.svelte';
+  import ExpenseForm from './ExpenseForm.svelte';
   // Veriables
   let expenses = [...expensesData];
   // reactive
@@ -39,7 +40,6 @@
 <main class="content">
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
-
   <button
     type="button"
     class="btn btn-primary btn-block"
