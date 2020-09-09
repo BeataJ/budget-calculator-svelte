@@ -1,6 +1,7 @@
 <script>
-  import App from './App.svelte';
   import Title from './Title.svelte';
+  let name = '';
+  let amount = null;
 </script>
 
 <section class="form">
