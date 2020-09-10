@@ -15,6 +15,7 @@
   let setAmount = null;
   let setId = null;
   // reactive
+  $: isEditing = setId ? true : false;
   $: total = expenses.reduce((acc, curr) => {
     return (acc += curr.amount);
   }, 0);
@@ -43,6 +44,7 @@
 
 <Navbar />
 <main class="content">
+  {isEditing}
   <ExpenseForm {addExpense} name={setName} amount={setAmount} />
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
