@@ -1,7 +1,7 @@
 <script>
   import Title from './Title.svelte';
-  let name = '';
-  let amount = null;
+  export let name = '';
+  export let amount = null;
   export let addExpense;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
