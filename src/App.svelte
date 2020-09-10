@@ -36,7 +36,9 @@
     setName = expense.name;
     setAmount = expense.amount;
   };
-
+  const editExpense = ({ name, amount }) => {
+    console.log({ name, amount });
+  };
   // context
   setContext('remove', removeExpense);
   setContext('modify', setModifiedExpense);
@@ -44,7 +46,12 @@
 
 <Navbar />
 <main class="content">
-  <ExpenseForm {addExpense} name={setName} amount={setAmount} {isEditing} />
+  <ExpenseForm
+    {addExpense}
+    name={setName}
+    amount={setAmount}
+    {isEditing}
+    {editExpense} />
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
   <button
