@@ -30,12 +30,5 @@
         on:click={() => setModifiedExpense(id)} /></button>
     <button class="expense-btn delete-btn" on:click={() => removeExpense(id)}><i
         class="fas fa-trash" /></button>
-    <!-- <button
-      class="expense-btn delete-btn"
-      on:click={() => dispatch('delete', {
-          id,
-          name: 'hi from SingleExpense',
-        })}><i class="fas fa-trash" />
-    </button> -->
   </div>
 </article>
