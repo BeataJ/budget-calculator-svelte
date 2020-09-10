@@ -22,7 +22,8 @@
     expenses = [];
   };
   const addExpense = ({ name, amount }) => {
-    console.log(name, amount);
+    let expense = { id: Math.random * Date.now(), name, amount };
+    expenses = [expense, ...expenses];
   };
 
   // context
