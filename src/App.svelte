@@ -44,8 +44,7 @@
 
 <Navbar />
 <main class="content">
-  {isEditing}
-  <ExpenseForm {addExpense} name={setName} amount={setAmount} />
+  <ExpenseForm {addExpense} name={setName} amount={setAmount} {isEditing} />
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
   <button
