@@ -3,6 +3,7 @@
   export let name = '';
   export let amount = null;
   export let addExpense;
+  export let isEditing;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
   const handleSubmit = () => {
@@ -31,7 +32,7 @@
       class="btn btn-block"
       class:disabled={isEmpty}
       disabled={isEmpty}>
-      add expense
+      {#if isEditing}edit expense{:else}add expense{/if}
     </button>
     <button type="button" class="close-btn">
       <i class="fas fa-times" /> close
