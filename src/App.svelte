@@ -31,6 +31,9 @@
   };
   const setModifiedExpense = (id) => {
     let expense = expenses.find((item) => item.id === id);
+    setId = expense.id;
+    setName = expense.name;
+    setAmount = expense.amount;
   };
 
   // context
