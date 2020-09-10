@@ -18,22 +18,15 @@
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
   };
-
   const clearExpenses = () => {
     expenses = [];
   };
+  const addExpense = ({ name, amount }) => {
+    console.log(name, amount);
+  };
 
-  // const state = {
-  //   name: 'simple name',
-  //   removeExpense: removeExpense,
-  // };
   // context
   setContext('remove', removeExpense);
-  // const deleteExpense = (e) => {
-  //   const { id, name } = e.detail;
-  //   console.log(name);
-  //   removeExpense(id);
-  // };
 </script>
 
 <Navbar />
