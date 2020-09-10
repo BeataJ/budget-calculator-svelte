@@ -22,7 +22,7 @@
     expenses = [];
   };
   const addExpense = ({ name, amount }) => {
-    let expense = { id: Math.random * Date.now(), name, amount };
+    let expense = { id: Math.random() * Date.now(), name, amount };
     expenses = [expense, ...expenses];
   };
 
