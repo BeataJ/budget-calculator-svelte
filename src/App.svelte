@@ -10,6 +10,10 @@
   import ExpenseForm from './ExpenseForm.svelte';
   // Veriables
   let expenses = [...expensesData];
+  // set editing variables
+  let setName = '';
+  let setAmount = null;
+  let setId = null;
   // reactive
   $: total = expenses.reduce((acc, curr) => {
     return (acc += curr.amount);
