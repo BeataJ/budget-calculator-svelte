@@ -38,6 +38,7 @@
 
   // context
   setContext('remove', removeExpense);
+  setContext('modify', setModifiedExpense);
 </script>
 
 <Navbar />
