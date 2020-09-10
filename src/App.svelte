@@ -29,6 +29,9 @@
     let expense = { id: Math.random() * Date.now(), name, amount };
     expenses = [expense, ...expenses];
   };
+  const setModifiedExpense = (id) => {
+    let expense = expenses.find((item) => item.id === id);
+  };
 
   // context
   setContext('remove', removeExpense);
