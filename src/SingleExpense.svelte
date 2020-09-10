@@ -8,6 +8,7 @@
     displayAmount = !displayAmount;
   };
   const removeExpense = getContext('remove');
+  const setModifiedExpense = getContext('modify');
   // const dispatch = createEventDispatcher();
 </script>
 
@@ -24,7 +25,9 @@
     {/if}
   </div>
   <div class="expense-buttons">
-    <button class="expense-btn edit-btn"><i class="fas fa-pen" /></button>
+    <button class="expense-btn edit-btn"><i
+        class="fas fa-pen"
+        on:click={() => setModifiedExpense(id)} /></button>
     <button class="expense-btn delete-btn" on:click={() => removeExpense(id)}><i
         class="fas fa-trash" /></button>
     <!-- <button
