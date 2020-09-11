@@ -4,10 +4,15 @@
   export let amount = null;
   export let addExpense;
   export let isEditing;
+  export let editExpense;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
   const handleSubmit = () => {
-    addExpense({ name, amount });
+    if (isEditing) {
+      editExpense({ name, amount });
+    } else {
+      addExpense({ name, amount });
+    }
     name = '';
     amount = null;
   };
