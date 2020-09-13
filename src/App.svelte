@@ -56,9 +56,7 @@
     bind:name={setName}
     bind:amount={setAmount}
     {isEditing}
-    <!-- {addExpense}
-    {editExpense}  -->
-    />
+    {handleSubmit} />
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
   <button
