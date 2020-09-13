@@ -46,9 +46,6 @@
         ? { ...item, name: setName, amount: setAmount }
         : { ...item };
     });
-    setId = null;
-    setName = '';
-    setAmount = null;
   };
   const handleSubmit = () => {
     if (isEditing) {
@@ -56,6 +53,9 @@
     } else {
       addExpense();
     }
+    setId = null;
+    setName = '';
+    setAmount = null;
   };
   // context
   setContext('remove', removeExpense);
