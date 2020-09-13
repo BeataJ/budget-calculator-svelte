@@ -4,6 +4,7 @@
   export let amount = null;
   // export let addExpense;
   export let isEditing;
+  export let handleSubmit;
   // export let editExpense;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
