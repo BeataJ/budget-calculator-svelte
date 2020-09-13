@@ -2,12 +2,20 @@
   import Title from './Title.svelte';
   export let name = '';
   export let amount = null;
-  // export let addExpense;
+  export let addExpense;
   export let isEditing;
-  export let handleSubmit;
-  // export let editExpense;
+  export let editExpense;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
+  const handleSubmit = () => {
+    if (isEditing) {
+      editExpense({ name, amount });
+    } else {
+      addExpense({ name, amount });
+    }
+    name = '';
+    amount = null;
+  };
 </script>
 
 <section class="form">

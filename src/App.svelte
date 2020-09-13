@@ -26,12 +26,8 @@
   const clearExpenses = () => {
     expenses = [];
   };
-  const addExpense = () => {
-    let expense = {
-      id: Math.random() * Date.now(),
-      name: setName,
-      amount: setAmount,
-    };
+  const addExpense = ({ name, amount }) => {
+    let expense = { id: Math.random() * Date.now(), name, amount };
     expenses = [expense, ...expenses];
   };
   const setModifiedExpense = (id) => {
@@ -40,19 +36,10 @@
     setName = expense.name;
     setAmount = expense.amount;
   };
-  const editExpense = () => {
+  const editExpense = ({ name, amount }) => {
     expenses = expenses.map((item) => {
-      return item.id === setId
-        ? { ...item, name: setName, amount: setAmount }
-        : { ...item };
+      return item.id === setId ? { ...item, name, amount } : { ...item };
     });
-  };
-  const handleSubmit = () => {
-    if (isEditing) {
-      editExpense();
-    } else {
-      addExpense();
-    }
     setId = null;
     setName = '';
     setAmount = null;
@@ -60,16 +47,16 @@
   // context
   setContext('remove', removeExpense);
   setContext('modify', setModifiedExpense);
-  $: console.log({ setName, setAmount });
 </script>
 
 <Navbar />
 <main class="content">
   <ExpenseForm
-    bind:name={setName}
-    bind:amount={setAmount}
+    {addExpense}
+    name={setName}
+    amount={setAmount}
     {isEditing}
-    {handleSubmit} />
+    {editExpense} />
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
   <button
