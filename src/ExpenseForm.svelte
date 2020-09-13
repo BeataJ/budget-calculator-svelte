@@ -5,6 +5,7 @@
   export let addExpense;
   export let isEditing;
   export let editExpense;
+  export let hideForm;
   // $: console.log({ name, amount });
   $: isEmpty = !name || !amount;
   const handleSubmit = () => {
@@ -40,7 +41,7 @@
       {#if isEditing}edit expense{:else}add expense{/if}
     </button>
     <button type="button" class="close-btn">
-      <i class="fas fa-times" /> close
+      <i class="fas fa-times" on:click={hideForm} /> close
     </button>
   </form>
 </section>
