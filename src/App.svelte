@@ -26,8 +26,12 @@
   const clearExpenses = () => {
     expenses = [];
   };
-  const addExpense = ({ name, amount }) => {
-    let expense = { id: Math.random() * Date.now(), name, amount };
+  const addExpense = () => {
+    let expense = {
+      id: Math.random() * Date.now(),
+      name: setName,
+      amount: setAmount,
+    };
     expenses = [expense, ...expenses];
   };
   const setModifiedExpense = (id) => {
@@ -36,13 +40,22 @@
     setName = expense.name;
     setAmount = expense.amount;
   };
-  const editExpense = ({ name, amount }) => {
+  const editExpense = () => {
     expenses = expenses.map((item) => {
-      return item.id === setId ? { ...item, name, amount } : { ...item };
+      return item.id === setId
+        ? { ...item, name: setName, amount: setAmount }
+        : { ...item };
     });
     setId = null;
     setName = '';
     setAmount = null;
+  };
+  const handleSubmit = () => {
+    if (isEditing) {
+      editExpense();
+    } else {
+      addExpense();
+    }
   };
   // context
   setContext('remove', removeExpense);
