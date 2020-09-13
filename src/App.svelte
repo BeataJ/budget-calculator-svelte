@@ -4,16 +4,18 @@
   // Components
   import Navbar from './Navbar.svelte';
   import ExpenseList from './ExpenseList.svelte';
-  // data
-  import expensesData from './expenses';
   import Totals from './Totals.svelte';
   import ExpenseForm from './ExpenseForm.svelte';
+  // data
+  import expensesData from './expenses';
   // Veriables
   let expenses = [...expensesData];
   // set editing variables
   let setName = '';
   let setAmount = null;
   let setId = null;
+  // toggle form veriables
+  let isFormOpen = false;
   // reactive
   $: isEditing = setId ? true : false;
   $: total = expenses.reduce((acc, curr) => {
