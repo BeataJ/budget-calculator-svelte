@@ -69,7 +69,8 @@
       name={setName}
       amount={setAmount}
       {isEditing}
-      {editExpense} />
+      {editExpense}
+      {hideForm} />
   {/if}
 
   <Totals title="total expenses" {total} />
