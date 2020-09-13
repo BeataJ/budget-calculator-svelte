@@ -55,7 +55,7 @@
   setContext('modify', setModifiedExpense);
 </script>
 
-<Navbar />
+<Navbar {showForm} />
 <main class="content">
   {#if isFormOpen}
     <ExpenseForm
