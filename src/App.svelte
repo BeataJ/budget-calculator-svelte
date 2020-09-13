@@ -25,7 +25,12 @@
   const showForm = () => {
     isFormOpen = true;
   };
-
+  const hideForm = () => {
+    isFormOpen = false;
+    setName = '';
+    setAmount = null;
+    setId = null;
+  };
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
   };
