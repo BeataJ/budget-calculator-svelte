@@ -46,6 +46,7 @@
     setId = expense.id;
     setName = expense.name;
     setAmount = expense.amount;
+    showForm();
   };
   const editExpense = ({ name, amount }) => {
     expenses = expenses.map((item) => {
