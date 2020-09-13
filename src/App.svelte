@@ -22,6 +22,10 @@
     return (acc += curr.amount);
   }, 0);
   // functions
+  const showForm = () => {
+    isFormOpen = true;
+  };
+
   const removeExpense = (id) => {
     expenses = expenses.filter((item) => item.id !== id);
   };
@@ -53,12 +57,15 @@
 
 <Navbar />
 <main class="content">
-  <ExpenseForm
-    {addExpense}
-    name={setName}
-    amount={setAmount}
-    {isEditing}
-    {editExpense} />
+  {#if isFormOpen}
+    <ExpenseForm
+      {addExpense}
+      name={setName}
+      amount={setAmount}
+      {isEditing}
+      {editExpense} />
+  {/if}
+
   <Totals title="total expenses" {total} />
   <ExpenseList {expenses} />
   <button
