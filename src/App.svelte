@@ -7,9 +7,9 @@
   import Totals from './Totals.svelte';
   import ExpenseForm from './ExpenseForm.svelte';
   // data
-  import expensesData from './expenses';
+  // import expensesData from './expenses';
   // Veriables
-  let expenses = [...expensesData];
+  let expenses = [];
   // set editing variables
   let setName = '';
   let setAmount = null;
