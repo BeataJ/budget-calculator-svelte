@@ -59,6 +59,10 @@
   // context
   setContext('remove', removeExpense);
   setContext('modify', setModifiedExpense);
+  // local storege
+  const setLocalStorage = () => {
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+  };
 </script>
 
 <Navbar {showForm} />
