@@ -94,3 +94,7 @@
     class="btn btn-primary btn-block"
     on:click={clearExpenses}>clear expenses</button>
 </main>
+<!-- <Modal /> -->
+<Modal>
+  <h3>Hello Word</h3>
+</Modal>
