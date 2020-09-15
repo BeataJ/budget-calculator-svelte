@@ -96,5 +96,10 @@
 </main>
 <!-- <Modal /> -->
 <Modal>
-  <h3>Hello Word</h3>
+  <h1 slot="header">Hello Word</h1>
+  <p slot="footer">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda
+    harum, ipsum voluptates nihil facere minima est perspiciatis modi.
+    Laudantium?
+  </p>
 </Modal>
