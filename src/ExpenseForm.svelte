@@ -53,8 +53,8 @@
       disabled={isEmpty}>
       {#if isEditing}edit expense{:else}add expense{/if}
     </button>
-    <button type="button" class="close-btn">
-      <i class="fas fa-times" on:click={hideForm} /> close
+    <button type="button" class="close-btn" on:click={hideForm}>
+      <i class="fas fa-times" /> close
     </button>
   </form>
 </section>
