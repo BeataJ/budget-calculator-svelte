@@ -78,13 +78,15 @@
 <Navbar {showForm} />
 <main class="content">
   {#if isFormOpen}
-    <ExpenseForm
-      {addExpense}
-      name={setName}
-      amount={setAmount}
-      {isEditing}
-      {editExpense}
-      {hideForm} />
+    <Modal>
+      <ExpenseForm
+        {addExpense}
+        name={setName}
+        amount={setAmount}
+        {isEditing}
+        {editExpense}
+        {hideForm} />
+    </Modal>
   {/if}
 
   <Totals title="total expenses" {total} />
@@ -94,4 +96,3 @@
     class="btn btn-primary btn-block"
     on:click={clearExpenses}>clear expenses</button>
 </main>
-<!-- <Modal /> -->
