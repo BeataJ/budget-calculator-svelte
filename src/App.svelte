@@ -1,5 +1,5 @@
 <script>
-  import { setContext } from 'svelte';
+  import { setContext, onMount } from 'svelte';
 
   // Components
   import Navbar from './Navbar.svelte';
@@ -67,6 +67,11 @@
   const setLocalStorage = () => {
     localStorage.setItem('expenses', JSON.stringify(expenses));
   };
+  onMount(() => {
+    expenses = localStorage.getItem('expenses')
+      ? JSON.parse(localStorage.getItem('expenses'))
+      : [];
+  });
 </script>
 
 <Navbar {showForm} />
