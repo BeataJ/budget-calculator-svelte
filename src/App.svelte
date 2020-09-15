@@ -6,6 +6,7 @@
   import ExpenseList from './ExpenseList.svelte';
   import Totals from './Totals.svelte';
   import ExpenseForm from './ExpenseForm.svelte';
+  import Modal from './Modal.svelte';
   // data
   // import expensesData from './expenses';
   // Veriables
