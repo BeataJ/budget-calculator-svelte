@@ -1,5 +1,5 @@
 <script>
-  import { setContext, onMount } from 'svelte';
+  import { setContext, onMount, afterUpdate } from 'svelte';
 
   // Components
   import Navbar from './Navbar.svelte';
@@ -71,6 +71,10 @@
     expenses = localStorage.getItem('expenses')
       ? JSON.parse(localStorage.getItem('expenses'))
       : [];
+  });
+  afterUpdate(() => {
+    console.log('after update');
+    setLocalStorage();
   });
 </script>
 
