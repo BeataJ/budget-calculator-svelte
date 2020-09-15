@@ -1,5 +1,6 @@
 <script>
   import { fade, blur, fly, slide, scale } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
   import { getContext } from 'svelte';
   export let id;
   export let name = '';
