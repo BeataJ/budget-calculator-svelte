@@ -1,5 +1,6 @@
 <script>
-  import { getContext, createEventDispatcher } from 'svelte';
+  import { fade, blur, fly, slide, scale } from 'svelte/transition';
+  import { getContext } from 'svelte';
   export let id;
   export let name = '';
   export let amount = 0;
