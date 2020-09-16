@@ -3,7 +3,7 @@
 </script>
 
 <div class="modal-container" in:blur out:fade>
-  <div class="modal-content">
+  <div class="modal-content" transition:fly={{ y: 200 }}>
     <slot />
   </div>
 </div>
