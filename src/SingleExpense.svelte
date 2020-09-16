@@ -23,9 +23,7 @@
       </button>
     </h2>
     {#if displayAmount}
-      <h4 in:fly={{ x: 50, y: 50, duration: 2000 }} out:slide>
-        amount: ${amount}
-      </h4>
+      <h4 transition:slide>amount: ${amount}</h4>
     {/if}
   </div>
   <div class="expense-buttons">
