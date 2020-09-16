@@ -10,4 +10,8 @@
   }
 </style>
 
-<h1>hello from github</h1>
+{#if loading}
+  <h2>Loading...</h2>
+{:else}
+  <h2>Data</h2>
+{/if}
