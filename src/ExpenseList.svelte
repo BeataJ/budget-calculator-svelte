@@ -17,7 +17,10 @@
   <SectionTitle title="expense list" />
   <ul>
     {#each expenses as expense, index (expense.id)}
-      <div in:fly={{ x: 200, delay: index * 700 }} out:fly={{ x: -200 }}>
+      <div
+        in:fly={{ x: 200, delay: index * 700 }}
+        out:fly={{ x: -200 }}
+        animate:flip>
         <SingleExpense {...expense} />
       </div>
     {:else}
