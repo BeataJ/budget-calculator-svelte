@@ -2,6 +2,7 @@
   import SectionTitle from './Title.svelte';
   import SingleExpense from './SingleExpense.svelte';
   import { fly } from 'svelte/transition';
+  import { flip } from 'svelte/animate';
   import App from './App.svelte';
   export let expenses = [];
 </script>
