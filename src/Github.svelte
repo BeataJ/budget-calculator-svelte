@@ -2,6 +2,12 @@
   import { onMount } from 'svelte';
   let users = [];
   let loading = true;
+  onMount(async () => {
+    let userData = await fetch('https://api.github.com/users');
+    let githubUsers = await userData.json();
+    users = githubUsers;
+    loading = false;
+  });
 </script>
 
 <style>
