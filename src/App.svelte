@@ -1,6 +1,6 @@
 <script>
   // import Github from './Github.svelte';
-  import GithubAwait from './GithubAwait.svelte';
+  // import GithubAwait from './GithubAwait.svelte';
   import { setContext, onMount, afterUpdate } from 'svelte';
 
   // Components
@@ -79,8 +79,8 @@
 
 <Navbar {showForm} />
 <main class="content">
-  <GithubAwait />
-  <!-- {#if isFormOpen}
+  <!-- <GithubAwait /> -->
+  {#if isFormOpen}
     <Modal>
       <ExpenseForm
         {addExpense}
@@ -97,5 +97,5 @@
   <button
     type="button"
     class="btn btn-primary btn-block"
-    on:click={clearExpenses}>clear expenses</button> -->
+    on:click={clearExpenses}>clear expenses</button>
 </main>
