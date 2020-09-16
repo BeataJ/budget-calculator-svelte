@@ -1,4 +1,5 @@
 <script>
+  import { blur, fade, fly } from 'svelte/transition';
 </script>
 
 <div class="modal-container">
