@@ -77,7 +77,7 @@
 
 <Navbar {showForm} />
 <main class="content">
-  {#if isFormOpen}
+  <!-- {#if isFormOpen}
     <Modal>
       <ExpenseForm
         {addExpense}
@@ -94,5 +94,5 @@
   <button
     type="button"
     class="btn btn-primary btn-block"
-    on:click={clearExpenses}>clear expenses</button>
+    on:click={clearExpenses}>clear expenses</button> -->
 </main>
